@@ -21,21 +21,21 @@ Log in into the container shell as root.
 ```ps
 docker exec -u 0 -it containername bash
 ````
-Enter the mysql prompt.
+Enter in the mysql client.
 ```ps
 mysql -u root -p
 ```
-Create a user you can log in with from another hosts than localhost
+Create a user with who you can log in with from another hosts than localhost.
 ```sql
 CREATE USER 'amigo'@'%' IDENTIFIED BY 'amigopasswd';
 ```
-Grant administrator's privileges for this user
+Grant administrator's privileges for this user.
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO 'amigo';
 ```
 
 ---
 ### **Enjoy it!**
-> Now you can use a database meneger to have fun with your mariadb
+> Now you can use a database meneger to have fun with your mariadb.
 
 [***Beyound***](mariadb.sql)
