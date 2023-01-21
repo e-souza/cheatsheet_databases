@@ -21,8 +21,13 @@ sudo docker exec -u 0 -it containername bash
 
 su postgres
 psql
-
-
+```
+Or
+```
+sudo -u postgres psql
+```
+Create the new user
+```
 CREATE USER root SUPERUSER INHERIT CREATEDB CREATEROLE;
 ALTER USER root PASSWORD 'password';
 CREATE DATABASE "test";
