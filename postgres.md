@@ -14,11 +14,13 @@ sudo docker run --detach --name containername -p 5432:5432 -e POSTGRES_PASSWORD=
 > Obs.: é recomendado excluir a linha acima do bash history.
 ## Configure your running instance
 
-Log in into the container shell as root and configure a user.
+Log in into the container shell as root.
 
 ```sh
 sudo docker exec -u 0 -it containername bash
-
+```
+ Run psql as postgres.
+```
 su postgres
 psql
 ```
@@ -26,7 +28,7 @@ Or
 ```
 sudo -u postgres psql
 ```
-Create the new user
+Create the new postgresql user
 ```
 CREATE USER root SUPERUSER INHERIT CREATEDB CREATEROLE;
 ALTER USER root PASSWORD 'password';
